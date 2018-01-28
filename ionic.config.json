@@ -2,5 +2,7 @@
   "name": "voltzApp",
   "app_id": "c6d415a1",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
