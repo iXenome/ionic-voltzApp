@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { PayPalPage } from '../pages/paypal/paypal';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,7 +17,8 @@ import { PayPal } from '@ionic-native/paypal';
     MyApp,
     HomePage,
     ListPage,
-    PayPalPage
+    PayPalPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { PayPal } from '@ionic-native/paypal';
     MyApp,
     HomePage,
     ListPage,
-    PayPalPage
+    PayPalPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

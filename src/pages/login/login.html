@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Login</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="no-scroll">
+    <form [formGroup]="loginForm" (ngSubmit)="logForm()">
+        <ion-item>
+            <ion-label color="primary" stacked>
+                <ion-icon name="person"></ion-icon>Username</ion-label>
+            <ion-input formControlName="username" type="text" clearInput></ion-input>
+        </ion-item>
+        <ion-item no-lines *ngIf="!loginForm.controls.username.valid && loginForm.controls.username.dirty">
+            <p style="color:red;">Invalid Username</p>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>
+                <ion-icon name="key"></ion-icon>Password</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <ion-item no-lines *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty">
+            <p style="color:red;">Password is required</p>
+        </ion-item>
+        <button ion-button type="submit" [disabled]="!loginForm.valid" class="button-submit">Submit</button>
+    </form>
+</ion-content>
