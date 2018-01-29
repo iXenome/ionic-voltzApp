@@ -25,7 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage, icon: 'home' },
       { title: 'List', component: ListPage, icon: 'list' },
-      { title: 'Paypal', component: PayPalPage, icon: 'cash' }
+      { title: 'Paypal', component: PayPalPage, icon: 'cash' },
+      { title: 'Logout', component:LoginPage, icon:'exit' }
     ];
 
   }

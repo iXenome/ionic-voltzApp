@@ -13,6 +13,7 @@ export class LoginPage {
     private loginForm: FormGroup;
 
     constructor(public navCtrl: NavController, private formBuilder: FormBuilder, private menu: MenuController, private alertCtrl: AlertController) {
+        localStorage.clear();
         this.loginForm = this.formBuilder.group({
             username: ['', Validators.compose([Validators.required,Validators.pattern('[a-z A-Z 0-9]+')])],
             password: ['', Validators.required]
@@ -25,6 +26,7 @@ export class LoginPage {
         if(this.loginForm.controls.username.value == 'Voltz'){
             if(this.loginForm.controls.password.value == 'xenome31113'){
                 this.menu.swipeEnable(true);
+                localStorage.setItem('User', this.loginForm.value);
                 this.navCtrl.setRoot(HomePage);
             }
             else{
