@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Register</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="no-scroll">
+    <form [formGroup]="registerForm" (ngSubmit)="regForm()">
+        <ion-item>
+            <ion-label color="primary" stacked>
+                <ion-icon name="person"></ion-icon>Username</ion-label>
+            <ion-input formControlName="username" type="text" clearInput></ion-input>
+        </ion-item>
+        <ion-item no-lines *ngIf="!registerForm.controls.username.valid && registerForm.controls.username.dirty">
+            <p style="color:red;">Invalid Username!</p>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>
+                <ion-icon name="mail"></ion-icon>Email Address</ion-label>
+            <ion-input formControlName="email" type="email" clearInput></ion-input>
+        </ion-item>
+        <ion-item no-lines *ngIf="!registerForm.controls.email.valid && registerForm.controls.email.dirty">
+            <p style="color:red;">Invalid Email Address!</p>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>
+                <ion-icon name="key"></ion-icon>Password</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <ion-item no-lines *ngIf="!registerForm.controls.password.valid && registerForm.controls.password.dirty">
+            <p style="color:red;">Password is required!</p>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>
+                <ion-icon name="key"></ion-icon>Confirm Password</ion-label>
+            <ion-input formControlName="cpassword" type="password"></ion-input>
+        </ion-item>
+        <ion-item no-lines *ngIf="!registerForm.controls.cpassword.valid && registerForm.controls.cpassword.dirty">
+            <p style="color:red;">Confirm Password is required!</p>
+        </ion-item>
+        <ion-item no-lines *ngIf="registerForm.hasError('mismatchedPasswords')">
+            <p style="color:red;">Passwords do not match!</p>
+        </ion-item>
+        <button ion-button type="submit" [disabled]="!registerForm.valid" class="button-submit">Enter</button>
+        <button ion-button type="button" (click)="goLogin()">Back</button>
+    </form>
+</ion-content>

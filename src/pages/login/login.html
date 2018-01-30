@@ -22,6 +22,7 @@
         <ion-item no-lines *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty">
             <p style="color:red;">Password is required</p>
         </ion-item>
-        <button ion-button type="submit" [disabled]="!loginForm.valid" class="button-submit">Submit</button>
+        <button ion-button type="submit" [disabled]="!loginForm.valid" class="button-submit">Enter</button>
+        <button ion-button type="button" (click)="goRegister()">Register</button>
     </form>
 </ion-content>

@@ -11,6 +11,7 @@ import { LoginPage } from '../pages/login/login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PayPal } from '@ionic-native/paypal';
+import { RegisterPage } from '../pages/register/register';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PayPal } from '@ionic-native/paypal';
     HomePage,
     ListPage,
     PayPalPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { PayPal } from '@ionic-native/paypal';
     HomePage,
     ListPage,
     PayPalPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

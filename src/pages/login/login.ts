@@ -4,6 +4,7 @@ import { FormGroup,Validators,FormBuilder } from '@angular/forms/';
 import { HomePage } from '../home/home';
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { AlertController } from 'ionic-angular';
+import { RegisterPage } from '../register/register';
 
 @Component({
     selector: 'page-login',
@@ -46,5 +47,10 @@ export class LoginPage {
             });
             alert.present();
         }
+    }
+
+    goRegister(){
+        localStorage.clear();
+        this.navCtrl.setRoot(RegisterPage);
     }
 }
