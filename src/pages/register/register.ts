@@ -39,7 +39,9 @@ export class RegisterPage {
 
     regForm(){
         console.log(this.registerForm.value);
-        localStorage.setItem('User', this.registerForm.value);
+        localStorage.setItem('Username', this.registerForm.controls.username.value);
+        localStorage.setItem('Email', this.registerForm.controls.email.value);
+        localStorage.setItem('Password', this.registerForm.controls.password.value);
         this.navCtrl.setRoot(HomePage);
     }
 

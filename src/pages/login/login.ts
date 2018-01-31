@@ -23,11 +23,11 @@ export class LoginPage {
     }
 
     logForm(){
-        console.log(this.loginForm.value);
         if(this.loginForm.controls.username.value == 'Voltz'){
             if(this.loginForm.controls.password.value == 'xenome31113'){
                 this.menu.swipeEnable(true);
-                localStorage.setItem('User', this.loginForm.value);
+                localStorage.setItem('Username', this.loginForm.controls.username.value);
+                localStorage.setItem('Password', this.loginForm.controls.password.value);
                 this.navCtrl.setRoot(HomePage);
             }
             else{

@@ -6,9 +6,10 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  username: string;
 
   constructor(public navCtrl: NavController) {
-
+    this.username = localStorage.getItem('Username');
   }
 
 }
